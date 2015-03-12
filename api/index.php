@@ -1,12 +1,23 @@
 <?php
 
 require $_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/config/config.php';
+
+// Database connection
+
+try {
+    R::setup('mysql:host=' . HOST . ';dbname=' . DB,  USER, PASSWORD);
+    R::debug( TRUE );
+} catch (PDOException $e) {
+    error_log($e->getMessage());
+}
 
 // Initiate the api
 $app = new \Slim\Slim(array(
 	'debug' => TRUE,
 ));
- 
+
+
 /*
 ===============================================================================
   API v1
