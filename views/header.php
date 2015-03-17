@@ -25,13 +25,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Website</a>
+          <div class="navbar-brand">Website</div>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">Features</a></li>
-            <li><a href="#contact">Pricing</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/login">Login</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

@@ -3,8 +3,12 @@
 define('DS', DIRECTORY_SEPARATOR);
 define('ROOT', dirname(__FILE__));
 
-$url = $_GET['url'];
- 
+$url = '';
+
+if( isset( $_GET['url'] ) ) {
+	$url = $_GET['url']; 
+}
+
 $urlArray = array();
 $urlArray = explode("/",$url);
 
